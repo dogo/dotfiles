@@ -1,0 +1,44 @@
+
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Listar arquivos e diretórios com cores para melhor visualização
+alias ls='ls --color=auto'
+
+# Destacar a correspondência de texto na busca com cores
+alias grep='grep --color=auto'
+
+# Atualizar todos os pacotes do sistema
+alias pacupdate='sudo pacman -Syu'
+
+# Instalar um pacote
+alias pacinstall='sudo pacman -S'
+
+# Instalar um pacote a partir de um arquivo local
+alias pacinstall-local='sudo pacman -U'
+
+# Remover um pacote
+alias pacremove='sudo pacman -R'
+
+# Remover um pacote e suas dependências não utilizadas
+alias pacremove-clean='sudo pacman -Rns'
+
+# Remover pacotes órfãos
+alias pacclean-orphans='sudo pacman -Rns $(pacman -Qdtq)'
+
+# Limpar o cache de pacotes
+alias pacclean-cache='sudo pacman -Scc'
+
+# Mostrar informações sobre um pacote instalado
+alias pacinfo='pacman -Qi'
+
+# Listar todos os pacotes instalados
+alias paclist='pacman -Q'
+
+# Mostrar arquivos de um pacote instalado
+alias pacfiles='pacman -Ql'
+
+# Mostrar os logs de transações do pacman
+alias paclogs='cat /var/log/pacman.log'
+
+# Verificar pacotes quebrados
+alias paccheck='pacman -Qk'
