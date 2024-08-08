@@ -1,6 +1,6 @@
 [user]
 	signingkey = D1D1C367587A3B58
-	email = diautiulio@gmail.com
+	email = diautilio@gmail.com
 	name = Diogo Autilio
 [commit]
 	gpgSign = true
