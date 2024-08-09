@@ -1,13 +1,16 @@
-#
-# ~/.bashrc
-#
-
+# Prompt configuration
 PS1='[\u@\h \W]\$ '
 
-# shellcheck source=$HOME/.cargo/env
-source "$HOME/.cargo/env"
+# Source Cargo environment (if Rust is used)
+if [ -f "$HOME/.cargo/env" ]; then
+    source "$HOME/.cargo/env"
+fi
 
-source "$HOME"/.bash_aliases
+# Source custom aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+    source "$HOME/.bash_aliases"
+fi
 
-export PSPDEV="$HOME"/.local/sdk/pspdev
-export PATH=$PATH:$PSPDEV/bin
+# Set PSPDEV environment variable and update PATH
+export PSPDEV="$HOME/.local/sdk/pspdev"
+export PATH="$PATH:$PSPDEV/bin"
