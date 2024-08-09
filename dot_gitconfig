@@ -4,3 +4,24 @@
 	name = Diogo Autilio
 [commit]
 	gpgSign = true
+[alias]
+    # Delete local and remote branch
+    nuke = "!f() { git branch -d $1 && git push origin --delete $1; }; f"
+
+    # List aliases
+    list-aliases = "!git config --get-regexp '^alias\\.' | awk -F' ' '{print $1}' | sed 's/^alias\\.//'"
+
+    # Restore the latest committed version of a deleted file
+    restore = "!f() { git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\"; }; f"
+
+    # Save all work into a commit "FIRE"
+    fire = "!f() { git add -A && git commit -m 'FIRE FIRE FIRE' && git push origin fire-branch; }; f"
+
+    # Delete Local Merged Branches (excluding master, develop, release)
+    lcleanup = "!f() { git branch --merged | grep -vE '(^\\*|master|develop|release)' | xargs -n 1 git branch -d; }; f"
+
+    # Delete Remote Merged Branches (excluding master, develop, release, hotfix)
+    rcleanup = "!f() { git branch -r --merged | grep -vE '(origin/(master|develop|release|hotfix))' | sed 's/origin\\///' | xargs -n 1 git push origin --delete; }; f"
+
+    # List Remote Branches Sorted by Creation Date and Committer Name
+    rauthor = "!f() { git for-each-ref --sort=creatordate --format='%(refname:short) %09 %(authoremail) %09 %(committername)' refs/remotes/; }; f"
