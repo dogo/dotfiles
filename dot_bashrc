@@ -1,7 +1,7 @@
 # Prompt configuration
 PS1='[\u@\h \W]\$ '
 
-# Source Cargo environment (if Rust is used)
+# Source Cargo environment
 if [ -f "$HOME/.cargo/env" ]; then
     source "$HOME/.cargo/env"
 fi

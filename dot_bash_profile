@@ -1,7 +1,7 @@
-#
-# ~/.bash_profile
-#
-
+# Load .bashrc if it exists
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-. "$HOME/.cargo/env"
+# Source Cargo environment
+if [ -f "$HOME/.cargo/env" ]; then
+    source "$HOME/.cargo/env"
+fi
