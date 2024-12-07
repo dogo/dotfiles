@@ -8,7 +8,11 @@ fi
 
 # Source custom aliases
 if [ -f "$HOME/.bash_aliases" ]; then
-    source "$HOME/.bash_aliases"
+  {{ if eq .chezmoi.osRelease.ID "fedora" }}
+    source "$HOME/.bash_aliases_linux_fedora"
+  {{ else if eq .chezmoi.osRelease.ID "arch" }}
+    source "$HOME/.bash_aliases_linux_arch"
+  {{ end }}
 fi
 
 # Set PSPDEV environment variable and update PATH

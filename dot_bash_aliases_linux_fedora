@@ -1,0 +1,8 @@
+# Listar arquivos e diretórios com cores para melhor visualização
+alias ls='ls --color=auto'
+
+# Destacar a correspondência de texto na busca com cores
+alias grep='grep --color=auto'
+
+# Remove versões antigas do kernel, mantendo apenas a mais recente
+alias kernel-cleanup='sudo dnf remove $(dnf repoquery --installonly --latest-limit=-1)'
