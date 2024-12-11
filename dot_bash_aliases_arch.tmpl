@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.osRelease.id "arch" }}
 # Listar arquivos e diretórios com cores para melhor visualização
 alias ls='ls --color=auto'
 
@@ -39,3 +40,4 @@ alias paclogs='cat /var/log/pacman.log'
 
 # Verificar pacotes quebrados
 alias paccheck='pacman -Qk'
+{{ end }}

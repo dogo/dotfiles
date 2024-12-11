@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.osRelease.id "fedora" }}
 # Listar arquivos e diretórios com cores para melhor visualização
 alias ls='ls --color=auto'
 
@@ -6,3 +7,4 @@ alias grep='grep --color=auto'
 
 # Remove versões antigas do kernel, mantendo apenas a mais recente
 alias kernel-cleanup='sudo dnf remove $(dnf repoquery --installonly --latest-limit=-1)'
+{{ end }}
