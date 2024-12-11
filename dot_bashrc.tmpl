@@ -8,9 +8,9 @@ fi
 
 # Source custom aliases
 if [ -f "$HOME/.bash_aliases" ]; then
-  {{ if eq .chezmoi.osRelease.ID "fedora" }}
+  {{ if eq .chezmoi.osRelease.id "fedora" }}
     source "$HOME/.bash_aliases_linux_fedora"
-  {{ else if eq .chezmoi.osRelease.ID "arch" }}
+  {{ else if eq .chezmoi.osRelease.id "arch" }}
     source "$HOME/.bash_aliases_linux_arch"
   {{ end }}
 fi
