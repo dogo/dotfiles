@@ -7,15 +7,15 @@ if [ -f "$HOME/.cargo/env" ]; then
 fi
 
 # Source custom aliases based on the detected distribution
-{{ if eq .chezmoi.osRelease.id "arch" }}
+{{- if eq .chezmoi.osRelease.id "arch" }}
 if [ -f "$HOME/.bash_aliases_arch" ]; then
     source "$HOME/.bash_aliases_arch"
 fi
-{{ else if eq .chezmoi.osRelease.id "fedora" }}
+{{- else if eq .chezmoi.osRelease.id "fedora" }}
 if [ -f "$HOME/.bash_aliases_fedora" ]; then
     source "$HOME/.bash_aliases_fedora"
 fi
-{{ end }}
+{{- end }}
 
 # Set PSPDEV environment variable and update PATH
 export PSPDEV="$HOME/.local/sdk/pspdev"
