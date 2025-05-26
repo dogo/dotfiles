@@ -17,6 +17,9 @@ if [ -f "$HOME/.bash_aliases_fedora" ]; then
 fi
 {{- end }}
 
+# Global aliases
+alias ecstasy='systemd-inhibit sleep infinity'
+
 # Set PSPDEV environment variable and update PATH
 export PSPDEV="$HOME/.local/sdk/pspdev"
 export PATH="$PATH:$PSPDEV/bin"
