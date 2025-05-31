@@ -25,3 +25,5 @@
 
     # List Remote Branches Sorted by Creation Date and Committer Name
     rauthor = "!f() { git for-each-ref --sort=creatordate --format='%(refname:short) %09 %(authoremail) %09 %(committername)' refs/remotes/; }; f"
+[gpg]
+	program = gpg

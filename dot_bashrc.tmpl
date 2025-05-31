@@ -23,3 +23,9 @@ alias ecstasy='systemd-inhibit sleep infinity'
 # Set PSPDEV environment variable and update PATH
 export PSPDEV="$HOME/.local/sdk/pspdev"
 export PATH="$PATH:$PSPDEV/bin"
+
+# Set GPG_TTY for GPG operations
+if [ -z "$GPG_TTY" ]; then
+    # shellcheck disable=SC2155
+    export GPG_TTY=$(tty)
+fi
