@@ -1,4 +1,4 @@
-{{ if eq .chezmoi.osRelease.id "arch" }}
+{{ if or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.id "cachyos") }}
 # Listar arquivos e diretórios com cores para melhor visualização
 alias ls='ls --color=auto'
 
