@@ -4,6 +4,7 @@ require("lazy").setup({
   { import = "plugins.ios.dap" },
   { import = "plugins.shared.catppuccin" },
   { import = "plugins.shared.devicons" },
+  { import = "plugins.shared.lualine" },
   { import = "plugins.shared.cmp" },
   { import = "plugins.shared.treesitter" },
   { import = "plugins.shared.telescope" },
