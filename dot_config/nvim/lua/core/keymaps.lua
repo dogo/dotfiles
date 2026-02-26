@@ -20,3 +20,9 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 -- Clear highlight
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+
+-- Diagnostics
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic" })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+vim.keymap.set("n", "<leader>dl", ":Telescope diagnostics<CR>", { desc = "List diagnostics" })
