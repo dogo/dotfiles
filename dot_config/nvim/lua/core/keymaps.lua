@@ -1,5 +1,5 @@
 -- Explorer
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Explorer" })
+vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Explorer" })
 
 -- Telescope
 vim.keymap.set("n", "<leader>f", ":Telescope find_files<CR>", { desc = "Find files" })
