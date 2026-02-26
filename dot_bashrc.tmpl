@@ -7,6 +7,7 @@ if [ -f "$HOME/.cargo/env" ]; then
 fi
 
 # Source custom aliases based on the detected distribution
+{{- if eq .chezmoi.os "linux" }}
 {{- if or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.id "cachyos") }}
 if [ -f "$HOME/.bash_aliases_arch" ]; then
     source "$HOME/.bash_aliases_arch"
@@ -15,6 +16,7 @@ fi
 if [ -f "$HOME/.bash_aliases_fedora" ]; then
     source "$HOME/.bash_aliases_fedora"
 fi
+{{- end }}
 {{- end }}
 
 # Global aliases
