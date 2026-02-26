@@ -1,2 +1,17 @@
 key.txt.age
 .DS_Store
+
+{{ if eq .chezmoi.os "darwin" }}
+.profile
+.bashrc
+.bash_profile
+.bash_aliases_arch
+.bash_aliases_fedora
+{{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+.zshrc
+.zshenv
+.zprofile
+.zsh_secrets
+{{ end }}
