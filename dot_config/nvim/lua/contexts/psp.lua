@@ -7,6 +7,7 @@ require("lazy").setup({
   { import = "plugins.shared.treesitter" },
   { import = "plugins.shared.neo-tree" },
   { import = "plugins.shared.avante" },
+  { import = "plugins.shared.lazygit" },
 }, {
   rocks = { enabled = false },
 })

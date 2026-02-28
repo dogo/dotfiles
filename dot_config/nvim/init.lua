@@ -14,6 +14,13 @@ vim.opt.rtp:prepend(lazypath)
 require("core.options")
 require("core.keymaps")
 
--- contexto (default: ios)
-local context = vim.env.NVIM_CONTEXT or "ios"
+local context = vim.env.NVIM_CONTEXT
+if not context then
+  local context_file = vim.fn.getcwd() .. "/.nvim-context"
+  if vim.fn.filereadable(context_file) == 1 then
+    context = vim.fn.readfile(context_file)[1]
+  else
+    context = "ios"
+  end
+end
 require("contexts." .. context)

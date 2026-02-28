@@ -15,6 +15,7 @@ require("lazy").setup({
   { import = "plugins.shared.fidget" },
   { import = "plugins.shared.snacks" },
   { import = "plugins.shared.nvim-dapui" },
+  { import = "plugins.shared.lazygit" },
 }, {
   rocks = { enabled = false },
 })
