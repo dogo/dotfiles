@@ -8,6 +8,8 @@ require("lazy").setup({
   { import = "plugins.shared.telescope" },
   { import = "plugins.shared.neo-tree" },
   { import = "plugins.shared.avante" },
+}, {
+  rocks = { enabled = false },
 })
 
 require("keymaps.rust")

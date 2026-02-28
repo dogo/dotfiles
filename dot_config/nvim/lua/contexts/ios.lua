@@ -15,6 +15,8 @@ require("lazy").setup({
   { import = "plugins.shared.fidget" },
   { import = "plugins.shared.snacks" },
   { import = "plugins.shared.nvim-dapui" },
+}, {
+  rocks = { enabled = false },
 })
 
 require("keymaps.ios")

@@ -7,6 +7,8 @@ require("lazy").setup({
   { import = "plugins.shared.treesitter" },
   { import = "plugins.shared.neo-tree" },
   { import = "plugins.shared.avante" },
+}, {
+  rocks = { enabled = false },
 })
 
 require("keymaps.psp")
