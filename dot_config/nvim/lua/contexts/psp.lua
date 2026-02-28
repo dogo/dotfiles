@@ -1,5 +1,5 @@
 require("lazy").setup({
-  { import = "plugins.c_cpp_lsp" },
+  { import = "plugins.psp.c_cpp_lsp" },
   { import = "plugins.shared.catppuccin" },
   { import = "plugins.shared.devicons" },
   { import = "plugins.shared.lualine" },
