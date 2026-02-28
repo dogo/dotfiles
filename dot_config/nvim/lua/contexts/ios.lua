@@ -12,6 +12,9 @@ require("lazy").setup({
   { import = "plugins.shared.telescope" },
   { import = "plugins.shared.neo-tree" },
   { import = "plugins.shared.avante" },
+  { import = "plugins.shared.fidget" },
+  { import = "plugins.shared.snacks" },
+  { import = "plugins.shared.nvim-dapui" },
 })
 
 require("keymaps.ios")
