@@ -1,17 +1,19 @@
 return {
   {
-    "neovim/nvim-lspconfig",
+    "mrcjkb/rustaceanvim",
+    version = "^5",
+    lazy = false,
     config = function()
-      vim.lsp.config("rust_analyzer", {
-        settings = {
-          ["rust-analyzer"] = {
-            cargo = { allFeatures = true },
-            checkOnSave = { command = "clippy" },
+      vim.g.rustaceanvim = {
+        server = {
+          settings = {
+            ["rust-analyzer"] = {
+              cargo = { allFeatures = true },
+              checkOnSave = { command = "clippy" },
+            },
           },
         },
-      })
-
-      vim.lsp.enable("rust_analyzer")
+      }
     end,
   },
 }

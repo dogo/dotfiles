@@ -1,5 +1,6 @@
 require("lazy").setup({
   { import = "plugins.rust.rust_lsp" },
+  { import = "plugins.rust.crates" },
   { import = "plugins.shared.catppuccin" },
   { import = "plugins.shared.devicons" },
   { import = "plugins.shared.lualine" },
