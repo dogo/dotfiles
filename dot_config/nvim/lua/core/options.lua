@@ -6,6 +6,9 @@ vim.opt.tabstop = 2
 vim.opt.termguicolors = true
 vim.opt.mouse = "a"
 
+vim.opt.exrc = true
+vim.opt.secure = true
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
