@@ -123,6 +123,8 @@ export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 export JAVA_HOME=$(/usr/libexec/java_home -v 21)
 export PATH="$JAVA_HOME/bin:$PATH"
 
+export PATH="$HOME/.local/bin:$PATH"
+
 export GPG_TTY=$(tty)
 
 # Source secrets (tokens, etc.)
