@@ -1,5 +1,5 @@
 # Load .bashrc if it exists
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f $HOME/.bashrc ]] && . "$HOME"/.bashrc
 
 # Source Cargo environment
 if [ -f "$HOME/.cargo/env" ]; then
