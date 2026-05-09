@@ -103,14 +103,14 @@ source $ZSH/oh-my-zsh.sh
 # pyEnv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# mise
-eval "$(~/.local/bin/mise activate zsh)"
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+eval "$(mise activate zsh)"
 
 # Dogo shortcuts
 alias cdd='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 alias pod='bundle exec pod'
 alias fastlane='bundle exec fastlane'
-alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 alias tree='find . -type d'
 
 export LC_ALL=en_US.UTF-8
@@ -119,10 +119,6 @@ export LANG=en_US.UTF-8
 export PSPDEV="$HOME/.local/pspdev"
 export PATH="$PATH:$PSPDEV/bin"
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
-
-export JAVA_HOME=$(/usr/libexec/java_home -v 21)
-export PATH="$JAVA_HOME/bin:$PATH"
-
 export PATH="$HOME/.local/bin:$PATH"
 
 export GPG_TTY=$(tty)
